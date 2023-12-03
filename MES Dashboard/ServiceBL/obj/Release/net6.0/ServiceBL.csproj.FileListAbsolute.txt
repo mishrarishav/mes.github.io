@@ -1,0 +1,73 @@
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\appsettings.Development.json
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\appsettings.json
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\ServiceBL.exe
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\ServiceBL.deps.json
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\ServiceBL.runtimeconfig.json
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\ServiceBL.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\ServiceBL.pdb
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\Microsoft.OpenApi.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\Newtonsoft.Json.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\System.Data.SqlClient.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.csproj.AssemblyReference.cache
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.GeneratedMSBuildEditorConfig.editorconfig
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.AssemblyInfoInputs.cache
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.AssemblyInfo.cs
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.csproj.CoreCompileInputs.cache
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.MvcApplicationPartsAssemblyInfo.cs
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.MvcApplicationPartsAssemblyInfo.cache
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\staticwebassets.build.json
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\staticwebassets.development.json
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\scopedcss\bundle\ServiceBL.styles.css
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.csproj.CopyComplete
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\refint\ServiceBL.dll
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.pdb
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ServiceBL.genruntimeconfig.cache
+E:\P Projects\v2sk\MES Dashboards\ServiceBL\obj\Release\net6.0\ref\ServiceBL.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\appsettings.Development.json
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\appsettings.json
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\ServiceBL.exe
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\ServiceBL.deps.json
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\ServiceBL.runtimeconfig.json
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\ServiceBL.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\ServiceBL.pdb
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\Microsoft.OpenApi.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\Newtonsoft.Json.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\System.Data.SqlClient.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.csproj.AssemblyReference.cache
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.AssemblyInfoInputs.cache
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.AssemblyInfo.cs
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.csproj.CoreCompileInputs.cache
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.MvcApplicationPartsAssemblyInfo.cs
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.MvcApplicationPartsAssemblyInfo.cache
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\staticwebassets\msbuild.ServiceBL.Microsoft.AspNetCore.StaticWebAssets.props
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\staticwebassets\msbuild.build.ServiceBL.props
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.ServiceBL.props
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.ServiceBL.props
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\staticwebassets.pack.json
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\staticwebassets.build.json
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\staticwebassets.development.json
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\scopedcss\bundle\ServiceBL.styles.css
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.csproj.CopyComplete
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\refint\ServiceBL.dll
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.pdb
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ServiceBL.genruntimeconfig.cache
+E:\WorkPlace\MES Dashboard\ServiceBL\obj\Release\net6.0\ref\ServiceBL.dll
