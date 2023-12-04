@@ -732,11 +732,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WorkPlace\\MES Dashboard\\ServiceBL\\ServiceBL.csproj",
+      "projectUniqueName": "E:\\WorkPlace\\Git Projects\\mes.github.io\\MES Dashboard\\ServiceBL\\ServiceBL.csproj",
       "projectName": "ServiceBL",
-      "projectPath": "E:\\WorkPlace\\MES Dashboard\\ServiceBL\\ServiceBL.csproj",
+      "projectPath": "E:\\WorkPlace\\Git Projects\\mes.github.io\\MES Dashboard\\ServiceBL\\ServiceBL.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "E:\\WorkPlace\\MES Dashboard\\ServiceBL\\obj\\",
+      "outputPath": "E:\\WorkPlace\\Git Projects\\mes.github.io\\MES Dashboard\\ServiceBL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+
+	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-profile.html" />
+
+	<title>Hourly</title>
+
+	<link href="css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="index.html">
+          <span class="align-middle">PG</span>
+        </a>
+
+		<ul class="sidebar-nav">
+			<li class="sidebar-header">
+				Dashboard
+			</li>
+
+			<li class="sidebar-item ">
+				<a class="sidebar-link" href="index.html">
+	  <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Admin</span>
+	</a>
+			</li>
+
+			<li class="sidebar-item active">
+				<a class="sidebar-link " href="pages-hourly.html">
+	  <i class="align-middle" data-feather="user"></i> <span class="align-middle">Hourly</span>
+	</a>
+			</li>
+
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="pages-sign-in.html">
+	  <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Plan</span>
+	</a>
+			</li>
+
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="pages-sign-up.html">
+	  <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Line</span>
+	</a>
+			</li>
+			
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+				
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle" data-feather="settings"></i>
+              </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+								<!-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />  -->
+								<span class="text-dark">Admin</span>
+              </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="pages-hourly.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Log out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+
+
+			
+				<div class="container-fluid p-0">
+					<nav aria-label="breadcrumb" style="background-color:#222e3cd6 ; border-radius: 3px;">
+						<ol class="breadcrumb">
+							<h1 class="h3 mb-3" style="padding: 8px; color: aliceblue;"><strong>Production Status - </strong>  Brand Model wise</h1>
+						</ol>
+					</nav>
+				
+					<div class="row">
+						<div class="col-12 col-lg-12 col-xxl-9 d-flex w-100">
+							<div class="card flex-fill">
+								<div class="col-6 col-lg-3 m-2 p-1">
+									<label for="dateFilter" class="form-label">Date Filter:</label>
+									<input type="date" id="datetimepicker-dashboard"  class="form-control">
+								</div>
+								<div class="col-6 col-lg-3 m-2 p-1">
+									<label for="shiftFilter" class="form-label">Shift:</label>
+									<select id="shiftFilter" class="form-control">
+										<option value="A">A</option>
+										<option value="B">B</option>
+										<option value="C">C</option>
+									</select>
+								</div>
+								<div class="card-header">
+									<h5 class="card-title mb-0">Latest Projects</h5>
+								</div>
+								<div class="card-body d-flex w-100">
+									<div class="align-self-center chart chart-lg">
+										<canvas id="chartjs-dashboard-bar"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								<a class="text-muted" href="https://V2SK.in/" target="_blank"><strong>PG</strong></a> - <a class="text-muted" href="https://V2SK.in/" target="_blank"><strong>V2SK</strong></a>								&copy;
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dateFilter = document.getElementById('datetimepicker-dashboard');
+    const shiftFilter = document.getElementById('shiftFilter');
+    let myChart = new Chart(document.getElementById('chartjs-dashboard-bar'), {
+        type: 'bar',
+        data: {
+            labels: [], // Initialize empty labels
+            datasets: [
+                {
+                    label: "Total Order",
+                    backgroundColor: window.theme.primary,
+                    borderColor: window.theme.primary,
+                    hoverBackgroundColor: window.theme.primary,
+                    hoverBorderColor: window.theme.primary,
+                    data: [], // Initialize empty data
+                    barPercentage: 1,
+                    categoryPercentage: 1
+                },
+                {
+                    label: "Completed",
+                    backgroundColor: window.theme.success,
+                    borderColor: window.theme.success,
+                    hoverBackgroundColor: window.theme.success,
+                    hoverBorderColor: window.theme.success,
+                    data: [], // Initialize empty data
+                    barPercentage: 1,
+                    categoryPercentage: 1
+                },
+                {
+                    label: "Pending",
+                    backgroundColor: window.theme.danger,
+                    borderColor: window.theme.danger,
+                    hoverBackgroundColor: window.theme.danger,
+                    hoverBorderColor: window.theme.danger,
+                    data: [], // Initialize empty data
+                    barPercentage: 0.5,
+                    categoryPercentage: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                datalabels: {
+                    color: '#000',
+                    formatter: (value, ctx) => {
+                        let datasets = ctx.chart.data.datasets;
+                        if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+                            let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+                            let percentage = Math.round((value / sum) * 100) + '%';
+                            console.log(`Percentage for value ${value}: ${percentage}`);
+                            return percentage;
+                        } else {
+                            return value;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    function updateChart() {
+        let dateStr = dateFilter.value;
+        let shift = shiftFilter.value;
+        console.log(`Fetching data for date: ${dateStr} and shift: ${shift}`);
+        fetch(`https://localhost:7199/hourly_dashboard?dt=${dateStr}&shift=${shift}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Data from server:', data);
+                // Update your chart data here
+                myChart.data.labels = data.map(item => item.Brand);
+                myChart.data.datasets[0].data = data.map(item => item.target); // Total Order
+                myChart.data.datasets[1].data = data.map(item => item.line_out); // Not Completed
+                myChart.update();
+                console.log('Chart data after update:', myChart.data);
+            })
+            .catch(error => {
+                console.log('Error fetching data:', error);
+            });
+    }
+
+    dateFilter.addEventListener('change', updateChart);
+    shiftFilter.addEventListener('change', updateChart);
+});
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+</body>
+
+</html>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LT/xkH+88ihryZ0JGOtMvQvRPlX+MUG88GxRyWcagToPxI1KvuY8aVPoUUiG3yqr4MxEIQMn+SpxPvncSRNAUQ==",
+  "dgSpecHash": "KCemVQ+omBYH96ZxZGUgZleVomOu+wuQrigk0QJdSvZ/njCywRdK6WCaz/9384Rajdy92c2mISQc4m2BTPj8Sg==",
   "success": true,
-  "projectFilePath": "E:\\WorkPlace\\MES Dashboard\\ServiceBL\\ServiceBL.csproj",
+  "projectFilePath": "E:\\WorkPlace\\Git Projects\\mes.github.io\\MES Dashboard\\ServiceBL\\ServiceBL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

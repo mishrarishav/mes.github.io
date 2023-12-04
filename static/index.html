@@ -18,6 +18,13 @@
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<style>
+		/* Custom CSS for table */
+		.table-container {
+			max-height: 400px;
+			overflow-y: auto;
+		}
+	</style>
 </head>
 
 <body>
@@ -40,7 +47,7 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="pages-hourly.html">
               <i class="align-middle" data-feather="user"></i> <span class="align-middle">Hourly</span>
             </a>
 					</li>
@@ -72,138 +79,7 @@
 
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
-						<li class="nav-item dropdown">
-							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
-								<div class="position-relative">
-									<i class="align-middle" data-feather="bell"></i>
-									<span class="indicator">4</span>
-								</div>
-							</a>
-							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-								<div class="dropdown-menu-header">
-									4 New Notifications
-								</div>
-								<div class="list-group">
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-danger" data-feather="alert-circle"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Update completed</div>
-												<div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-												<div class="text-muted small mt-1">30m ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-warning" data-feather="bell"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Lorem ipsum</div>
-												<div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-primary" data-feather="home"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Login from 192.186.1.8</div>
-												<div class="text-muted small mt-1">5h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-success" data-feather="user-plus"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">New connection</div>
-												<div class="text-muted small mt-1">Christina accepted your request.</div>
-												<div class="text-muted small mt-1">14h ago</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Show all notifications</a>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
-								<div class="position-relative">
-									<i class="align-middle" data-feather="message-square"></i>
-								</div>
-							</a>
-							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
-								<div class="dropdown-menu-header">
-									<div class="position-relative">
-										4 New Messages
-									</div>
-								</div>
-								<div class="list-group">
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Vanessa Tucker</div>
-												<div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
-												<div class="text-muted small mt-1">15m ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">William Harris</div>
-												<div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Christina Mason</div>
-												<div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
-												<div class="text-muted small mt-1">4h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Sharon Lessman</div>
-												<div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
-												<div class="text-muted small mt-1">5h ago</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Show all messages</a>
-								</div>
-							</div>
-						</li>
+				
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
                 <i class="align-middle" data-feather="settings"></i>
@@ -214,7 +90,7 @@
 								<span class="text-dark">Admin</span>
               </a>
 							<div class="dropdown-menu dropdown-menu-end">
-								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="pages-hourly.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
@@ -229,7 +105,18 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+				
+
+
+					<nav aria-label="breadcrumb" style="background-color:#222e3cd6 ; border-radius: 3px;">
+						<ol class="breadcrumb">
+							<h1 class="h3 mb-3" style="padding: 8px; color: aliceblue;"><strong>Analytics</strong> Dashboard</h1>
+						</ol>
+					  </nav>
+
+
+
+
 					<div class="row">
 						<div class="col-12 col-lg-12 col-xxl-9 d-flex w-100">
 							<div class="card flex-fill">
@@ -240,6 +127,9 @@
 								<div class="card-header">
 									<h5 class="card-title mb-0">Latest Projects</h5>
 								</div>
+
+								<div class="table-container">
+
 								<table class="table table-hover my-0">
 									<thead>
 										<tr>
@@ -260,6 +150,8 @@
 										<!-- Data from the API will be inserted here -->
 									</tbody>
 								</table>
+							</div>
+
 							</div>
 						</div>
 					</div>
@@ -282,22 +174,22 @@
 					<div class="row text-muted">
 						<div class="col-6 text-start">
 							<p class="mb-0">
-								<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>PG</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin Template</strong></a>								&copy;
+								<a class="text-muted" href="https://V2SK.in/" target="_blank"><strong>PG</strong></a> - <a class="text-muted" href="https://V2SK.in/" target="_blank"><strong>V2SK</strong></a>								&copy;
 							</p>
 						</div>
 						<div class="col-6 text-end">
 							<ul class="list-inline">
 								<li class="list-inline-item">
-									<a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Support</a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Help Center</a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Privacy</a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
+									<a class="text-muted" href="https://V2SK.in/" target="_blank">Terms</a>
 								</li>
 							</ul>
 						</div>
@@ -308,88 +200,85 @@
 	</div>
 
 	<script src="js/app.js"></script>
-
 	<script>
 		let myChart;
-document.addEventListener("DOMContentLoaded", function() {
-	
-    const dateFilter = document.getElementById('datetimepicker-dashboard');
-     myChart = new Chart(document.getElementById('chartjs-dashboard-bar'), {
-        type: 'bar',
-        data: {
-            labels: [], // Initialize empty labels
-            datasets: [
-                {
-                    label: "Total Order",
-                    backgroundColor: window.theme.primary,
-                    borderColor: window.theme.primary,
-                    hoverBackgroundColor: window.theme.primary,
-                    hoverBorderColor: window.theme.primary,
-                    data: [], // Initialize empty data
-                    barPercentage: 1,
-                    categoryPercentage: 1
-                },
-                {
-                    label: "Completed",
-                    backgroundColor: window.theme.success,
-                    borderColor: window.theme.success,
-                    hoverBackgroundColor: window.theme.success,
-                    hoverBorderColor: window.theme.success,
-                    data: [], // Initialize empty data
-                    barPercentage: 1,
-                    categoryPercentage: 1
-                },
-                {
-                    label: "Pending",
-                    backgroundColor: window.theme.danger,
-                    borderColor: window.theme.danger,
-                    hoverBackgroundColor: window.theme.danger,
-                    hoverBorderColor: window.theme.danger,
-                    data: [], // Initialize empty data
-                    barPercentage: 0.5,
-                    categoryPercentage: 1
-                }
-            ]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            },
-            plugins: {
-                datalabels: {
-                    color: '#000',
-                    formatter: (value, ctx) => {
-                        let datasets = ctx.chart.data.datasets;
-
-                        if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
-                            let sum = datasets[0].data.reduce((a, b) => a + b, 0);
-                            let percentage = Math.round((value / sum) * 100) + '%';
-                            return percentage;
-                        } else {
-                            return percentage;
-                        }
-                    }
-                }
-            }
-        }
-    });
-
- 
-});
+		document.addEventListener("DOMContentLoaded", function() {
+			const dateFilter = document.getElementById('datetimepicker-dashboard');
+			myChart = new Chart(document.getElementById('chartjs-dashboard-bar'), {
+				type: 'bar',
+				data: {
+					labels: [], // Initialize empty labels
+					datasets: [
+						{
+							label: "Total Order",
+							backgroundColor: window.theme.primary,
+							borderColor: window.theme.primary,
+							hoverBackgroundColor: window.theme.primary,
+							hoverBorderColor: window.theme.primary,
+							data: [], // Initialize empty data
+							barPercentage: 1,
+							categoryPercentage: 1
+						},
+						{
+							label: "Completed",
+							backgroundColor: window.theme.success,
+							borderColor: window.theme.success,
+							hoverBackgroundColor: window.theme.success,
+							hoverBorderColor: window.theme.success,
+							data: [], // Initialize empty data
+							barPercentage: 1,
+							categoryPercentage: 1
+						},
+						{
+							label: "Pending",
+							backgroundColor: window.theme.danger,
+							borderColor: window.theme.danger,
+							hoverBackgroundColor: window.theme.danger,
+							hoverBorderColor: window.theme.danger,
+							data: [], // Initialize empty data
+							barPercentage: 0.5,
+							categoryPercentage: 1
+						}
+					]
+				},
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					},
+					plugins: {
+						datalabels: {
+							display: true,
+							color: '#000',
+							formatter: (value, ctx) => {
+								let datasets = ctx.chart.data.datasets;
+								if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+									let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+									let percentage = Math.round((value / sum) * 100) + '%';
+									console.log('Percentage:', percentage);
+									return percentage;
+								} else {
+									return value;
+								}
+							}
+						}
+					}
+				}
+			});
+		});
 	</script>
-
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
 	<script>
 document.addEventListener("DOMContentLoaded", function() {
-    var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+    var date = new Date(Date.now());
     var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
     var dateFilter = document.getElementById("datetimepicker-dashboard");
     dateFilter.flatpickr({
-        inline: true,
+        inline: false,
         prevArrow: "<span title=\"Previous month\">&laquo;</span>",
         nextArrow: "<span title=\"Next month\">&raquo;</span>",
         defaultDate: defaultDate,
