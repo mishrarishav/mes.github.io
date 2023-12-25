@@ -2,6 +2,7 @@
 import SimpleBar from "simplebar";
 
 const initialize = () => {
+
   initializeSimplebar();
   initializeSidebarCollapse();
 }
@@ -26,6 +27,7 @@ const initializeSimplebar = () => {
   }
 }
 
+
 const initializeSidebarCollapse = () => {
   const sidebarElement = document.getElementsByClassName("js-sidebar")[0];
   const sidebarToggleElement = document.getElementsByClassName("js-sidebar-toggle")[0];
@@ -40,6 +42,7 @@ const initializeSidebarCollapse = () => {
     });
   }
 }
+
 
 // Wait until page is loaded
 document.addEventListener("DOMContentLoaded", () => initialize());

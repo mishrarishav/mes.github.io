@@ -36,11 +36,6 @@
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Highcharts -->
-  <script src="https://code.highcharts.com/highcharts.js"></script>
   </head>
   <style>
     body {
@@ -122,14 +117,14 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="pages-sign-in.html">
                 <i class="align-middle" data-feather="log-in"></i>
-                <span class="align-middle">Log out </span>
+                <span class="align-middle">Plan</span>
               </a>
             </li>
 
             <li class="sidebar-item">
               <a class="sidebar-link" href="pages-sign-up.html">
                 <i class="align-middle" data-feather="user-plus"></i>
-                <span class="align-middle">Sign up</span>
+                <span class="align-middle">Line</span>
               </a>
             </li>
           </ul>
@@ -191,10 +186,40 @@
         </nav>
 
         <main class="content">
-          <div class="container-fluid p-0">
+
+
+
+
+
+
+
+
+
+
+          
         
-           
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
 
           
             <nav
@@ -207,6 +232,7 @@
                 </h1>
               </ol>
             </nav>
+          
 
 
 
@@ -214,40 +240,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="row">
-              <div class="col-12 col-lg-12 col-xxl-9 d-flex w-100">
-                <div class="">
-                  <div class="row">
-
-
-
-
-
-
-
-                    <style>
-                     .blue-header {
-                background-color: #ffffff;
+            <style>
+              /* Custom CSS for blue header */
+              .blue-header {
+                background-color: #1b1bae91;
                 color: white;
               }
           
@@ -263,197 +259,181 @@
               /* Borders between columns */
               table {
                 border-collapse: collapse;
-                width: 50%;
-                table-layout: fixed
+                width: 37%,
                 
               }
-              tfoot {
-  position: sticky;
-  bottom: 0;
-  background-color: #1b1bae91;
-  font-size: 20px;
-  font-weight: bold;
-}
           
               th, td {
                 border: 1px solid #dddddd;
                 text-align: left;
                 padding: 8px;
-                font-size: 20px;
-                font-weight: bold;
               }
           
               th {
-                background-color: #3737ae68;
+                background-color: #1b1bae;
                 color: white;
               }
-                  
-                      /* Additional CSS for Highcharts chart container */
-                      #barChartContainer {
-                        margin-top: -15px; /* Adjust margin as needed */
-                      }
-                  
-                      /* Adjust the width and height of the chart container */
-                      .chart-container {
-                        height: 300px; /* Set the height as desired */
-                        width: 100%; /* Adjust the width */
-                      }
 
-                    </style>
-
-
-<div class="col-md-6 card flex-fill" style="height: 330px; overflow-y: auto;">
-  <table class="table" style="width: 100%;">
-    <thead>
-      <tr class="blue-header">
-        <th>Sl. no</th>
-        <th>Model</th>
-        <th>Quantity</th>
-      </tr>
-    </thead>
-    <tbody id="tableBody">
-      <!-- Rows will be added dynamically using JavaScript -->
-    </tbody>
-    <tfoot style="position: sticky; bottom: 0; background-color: #1b1bae91;">
-      <tr class="blue-header">
-        <td colspan="2">Total</td>
-        <td id="totalQuantity"></td>
-      </tr>
-    </tfoot>
-  </table>
-</div>
-
-
-                    <div class="col-md-6 card flex-fill">
-                      <div class="chart-container">
-                        <!-- This div will contain the chart -->
-                        <div id="barChartContainer" style="height: 254px;"></div>
-                      </div>
-                    </div>
-                   
-                  
-                    <!-- Your JavaScript code -->
-                    <script>
-                      // Function to generate table rows
-    function generateRows(data) {
-      let html = '';
-      let totalQuantity = 0;
-
-      data.forEach((row, index) => {
-        const rowColorClass = index % 2 === 0 ? '' : 'table-row-colored';
-        html += `
-          <tr class="${rowColorClass}">
-            <td>${index + 1}</td>
-            <td>${row.Model}</td>
-            <td>${row.line_out}</td>
-          </tr>
-        `;
-        totalQuantity += row.line_out;
-      });
-
-      // Append rows to table body
-      $('#tableBody').html(html);
-
-      // Set total quantity in the footer
-      $('#totalQuantity').text(totalQuantity);
+/* graph style  */
+#barChartContainer2 {
+      margin-top: 20px; /* Adjust margin as needed */
     }
 
-    // Get current date and time
-    let now = new Date();
+    /* Adjust the width and height of the chart container */
+    .chart-container {
+      height: 300px; /* Set the height as desired */
+      width: 100%; /* Adjust the width */
+    }
 
-    // Format date as yyyy-mm-dd
-    let date = now.toISOString().split('T')[0];
 
-    // Determine shift based on current time
-    let hours = now.getHours();
-    let shift = (hours >= 8 && hours < 20) ? 'a' : 'b';
+            </style>
+       
+      
+          
+        
+          <!-- Bootstrap JS and jQuery CDN -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          
+          <div class="container mt-4">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- Your existing table structure -->
+                <table class="table">
+                  <thead>
+                    <tr class="blue-header">
+                      <th>Sl. no</th>
+                      <th>Model</th>
+                      <th>Quantity</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody">
+                    <!-- Rows will be added dynamically using JavaScript -->
+                  </tbody>
+                  <tfoot>
+                    <tr class="blue-header">
+                      <td colspan="2">Total</td>
+                      <td id="totalQuantity">485</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="chart-container">
+                  <!-- This div will contain the chart -->
+                  <div id="barChartContainer2" ></div>
+                </div>
+              </div>
 
-    // Fetch data from the API and generate table rows
-    // fetch(`http://110.172.134.186:89/hourly_dashboard?dt=${date}&shift=${shift}`)
-    fetch(`http://110.172.134.186:89/hourly_dashboard?dt=2023-12-25&shift=a`)
-      .then(response => response.json())
-      .then(data => {
-        generateRows(data);
-      })
-      .catch(error => console.error('Error:', error));
 
- 
+            </div>
+          </div>
+        
 
-                 // Fetch data from the API
-fetch('http://110.172.134.186:89/line_dashboard')
-  .then(response => response.json())
-  .then(data => {
-    // Prepare data for the chart
-    const categories = data.map(item => `L ${item.line_no}`);
-    const seriesData = data.map(item => item.totalout);
-    const totalLineOut = seriesData.reduce((acc, curr) => acc + curr, 0);
 
-    // Create the chart
-    Highcharts.chart('barChartContainer', {
-      chart: {
-        type: 'bar'
-      },
-      title: {
-        text: `Total Count -  ${totalLineOut}`,
-        style: {
-                                                fontSize: "30px",
-                                                fontWeight: "bold",
-                                            },
-      },
-      xAxis: {
-        categories: categories,
-        style: {
-          fontSize: "40px",
-        },
-        labels: {
-          style: {
-            fontSize: "30px",
-            fontWeight: "bold",
-          },
-        },
-      },
-      yAxis: {
-        text: "Line Out",
-        style: {
-          fontSize: "30px",
-        },
-        labels: {
-          style: {
-            fontSize: "30px",
-            fontWeight: "bold",
-          },
-        },
-      },
-      plotOptions: {
-        series: {
-          pointWidth: 50, // Adjust the thickness of the bars (in pixels)
-          dataLabels: {
-            enabled: true, // Show data labels on top of the bars
-            format: '{y}', // Display the value of each bar
-            style: {
-              // Outline for better readability
-           
-                                                fontSize: "30px",
-                                                fontWeight: "bold",
-                                          
+
+
+
+          <div class="container-fluid p-0">
+        
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                  <div id="barChartContainer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <!-- jQuery -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <!-- Bootstrap JS -->
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <!-- Highcharts -->
+          <script src="https://code.highcharts.com/highcharts.js"></script>
+        
+          <!-- Your JavaScript code -->
+          <script>
+            // Data for the table
+            const rowsData = [
+              { slNo: 1, model: '23FSCROMGOSM', quantity: 300 },
+              { slNo: 2, model: '43SMDFTGH2303', quantity: 185 }
+            ];
+        
+            // Function to generate table rows
+            function generateRows(data) {
+              let html = '';
+              let totalQuantity = 0;
+        
+              data.forEach((row, index) => {
+                const rowColorClass = index % 2 === 0 ? '' : 'table-row-colored';
+                html += `
+                  <tr class="${rowColorClass}">
+                    <td>${row.slNo}</td>
+                    <td>${row.model}</td>
+                    <td>${row.quantity}</td>
+                  </tr>
+                `;
+                totalQuantity += row.quantity;
+              });
+        
+              // Append rows to table body
+              $('#tableBody').html(html);
+        
+              // Set total quantity in the footer
+              $('#totalQuantity').text(totalQuantity);
             }
-          },
-          lineWidth: 3,
-        }
-      },
-      credits: {
-        enabled: false // Disable Highcharts credits
-      },
-      series: [{
-        data: seriesData // Use fetched data values
-      }]
-    });
-  })
-  .catch(error => console.error('Error:', error));
-                   
-                   
-                   
-                      </script>
+        
+            // Generate table rows on document load
+            $(document).ready(function() {
+              generateRows(rowsData);
+            });
+        
+            // Data for Highcharts
+            document.addEventListener('DOMContentLoaded', function () {
+              Highcharts.chart('barChartContainer2', {
+                chart: {
+                  type: 'bar'
+                },
+                title: {
+                  text: 'Line Wise'
+                },
+                xAxis: {
+                  categories: ['L 1', 'L 2', 'L 3']
+                },
+                yAxis: {
+                  title: {
+                    text: 'Values'
+                  }
+                },
+                plotOptions: {
+                  series: {
+                    pointWidth: 20, // Adjust the thickness of the bars (in pixels)
+                    groupPadding: 1, // Adjust the spacing between groups of bars
+                    pointPadding: 0.05
+                  }
+                },
+                credits: {
+                  enabled: false // Disable Highcharts credits
+                },
+                series: [{
+                  name: 'Values',
+                  data: [10, 7, 15] // Replace with your data values
+                }]
+              });
+            });
+          </script>
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -465,87 +445,82 @@ fetch('http://110.172.134.186:89/line_dashboard')
 
 
 
-
-
+            <div class="row">
+              <div class="col-12 col-lg-12 col-xxl-9 d-flex w-100">
+                <div class="card flex-fill">
+                  <div class="row">
+                    <div class="col-6 col-lg-3 m-2 p-1">
+                      <label for="dateFilter" class="form-label"
+                        >Date Filter:</label
+                      >
+                      <input
+                        type="date"
+                        id="datetimepicker-dashboard"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-6 col-lg-3 m-2 p-1">
+                      <label for="shiftFilter" class="form-label">Shift:</label>
+                      <select id="shiftFilter" class="form-control">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                      </select>
+                    </div>
+                  </div>
 
 
                   
-                  <div id="container" class="mt-4"></div>
-                  
-                  <script src="https://code.highcharts.com/highcharts.js"></script>
+                  <div class="row align-items-center">
+                    <div class="col-6 col-lg-9">
+                      <div class="card-header">
+                        <h5 class="card-title mb-0">Latest Projects</h5>
+                      </div>
+                    </div>
+                    <div class="col-6 col-lg-3 text-end">
+                    
+                    </div>
+                  </div>
+
+             
+
+
                   <script>
-                    const dateInput = document.createElement("input");
-                    dateInput.type = "date";
-                    dateInput.id = "datetimepicker-dashboard";
-                    dateInput.className = "form-control";
-                  
-                    const shiftSelect = document.createElement("select");
-                    shiftSelect.id = "shiftFilter";
-                    shiftSelect.className = "form-control";
-                  
-                    const optionA = document.createElement("option");
-                    optionA.value = "A";
-                    optionA.textContent = "A";
-                    const optionB = document.createElement("option");
-                    optionB.value = "B";
-                    optionB.textContent = "B";
-                    const optionC = document.createElement("option");
-                    optionC.value = "C";
-                    optionC.textContent = "C";
-                  
-                    shiftSelect.appendChild(optionA);
-                    shiftSelect.appendChild(optionB);
-                    shiftSelect.appendChild(optionC);
-                  
-                    // Simulating the existing structure
-                    document.body.appendChild(dateInput);
-                    document.body.appendChild(shiftSelect);
-                  
-                    function getShift() {
-                      const currentTime = new Date().getHours();
-                      return currentTime >= 8 && currentTime < 20 ? "A" : "B";
-                    }
-                  
-                    function formatDate(date) {
-                      const year = date.getFullYear();
-                      const month = String(date.getMonth() + 1).padStart(2, "0");
-                      const day = String(date.getDate()).padStart(2, "0");
-                      return `${year}-${month}-${day}`;
-                    }
-                  
+                    // Get the date and shift values
+                    const dateInput = document.getElementById("datetimepicker-dashboard");
+                    const shiftSelect = document.getElementById("shiftFilter");
+                
+                    // Function to load the chart
                     function loadChart() {
-                      const selectedDate = dateInput.value ? new Date(dateInput.value) : new Date();
-                      const formattedDate = formatDate(selectedDate);
-                      const shift = shiftSelect.value || getShift();
-                  
-                      // fetch(`http://110.172.134.186:89/hourly_dashboard?dt=${formattedDate}&shift=${shift}`)
-                      fetch(`http://110.172.134.186:89/hourly_dashboard?dt=2023-12-09&shift=a`)
-                        .then((response) => response.json())
-                        .then((data) => {
-
-
-
-                          
-                          const categories = data.map((item) => item.tim);
-                          const seriesData = data.map((item) => item.line_out);
-
-                          const totalLineOut = seriesData.reduce((acc, curr) => acc + curr, 0);
-                  
-                          Highcharts.chart("container", {
-                            chart: {
-                              type: "column",
+                        const date = dateInput.value;
+                        const shift = shiftSelect.value;
+                
+                        // Fetch data from the API
+                       // 
+                        // fetch(`http://110.172.134.186:89/hourly_dashboard?dt=${date}&shift=${shift}`)
+                        fetch(`https://localhost:7199/hourly_dashboard?dt=${date}&shift=${shift}`)
+                            .then((response) => response.json())
+                            .then((data) => {
+                                // Prepare data for the chart
+                                const categories = data.map((item) => item.tim);
+                                const seriesData = data.map((item) => item.line_out);
+                
+                                // Create the chart
+                                Highcharts.chart("container", {
+                                    chart: {
+                                        type: "column",
                                     },
                                     title: {
-                                        text: `Total Count -  ${totalLineOut}`,
+                                        text: "Hourly Status",
                                         style: {
-                                            fontSize: "40px",
+                                            fontSize: "20px",
                                         },
                                     },
                                     xAxis: {
                                         categories: categories,
                                         labels: {
                                             style: {
-                                                fontSize: "30px",
+                                                fontSize: "20px",
                                                 fontWeight: "bold",
                                             },
                                         },
@@ -554,19 +529,19 @@ fetch('http://110.172.134.186:89/line_dashboard')
                                         title: {
                                             text: "Line Out",
                                             style: {
-                                                fontSize: "40px",
+                                                fontSize: "20px",
                                             },
                                         },
                                         labels: {
                                             style: {
-                                                fontSize: "30px",
+                                                fontSize: "20px",
                                                 fontWeight: "bold",
                                             },
                                         },
                                     },
                                     plotOptions: {
                                         series: {
-                                            pointWidth: 70, // Increase the width of the bars
+                                            pointWidth: 50, // Increase the width of the bars
                                             dataLabels: {
                                                 enabled: true,
                                                 style: {
@@ -622,7 +597,15 @@ fetch('http://110.172.134.186:89/line_dashboard')
                 </div>
               </div>
             </div>
-          </div>
+         
+
+
+
+
+
+
+
+
         </main>
 
         <footer class="footer">
