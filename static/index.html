@@ -25,6 +25,11 @@
 			overflow-y: auto;
 		}
 	</style>
+	 <script src="https://code.highcharts.com/highcharts.js"></script>
+
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 
 <body>
@@ -54,13 +59,13 @@
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="pages-sign-in.html">
-              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Plan</span>
+              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Log out</span>
             </a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="pages-sign-up.html">
-              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Line</span>
+              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign up </span>
             </a>
 					</li>
 
@@ -102,7 +107,49 @@
 					</ul>
 				</div>
 			</nav>
-
+<style>
+     .blue-header {
+                background-color: #ffffff;
+                color: white;
+              }
+          
+              /* Custom styling for table rows */
+              tbody tr:nth-child(even) {
+                background-color: #97cadf;
+              }
+          
+              tbody tr:hover {
+                background-color: #e0e0e0;
+              }
+          
+              /* Borders between columns */
+              table {
+                border-collapse: collapse;
+                width: 50%;
+                table-layout: fixed
+                
+              }
+              tfoot {
+  position: sticky;
+  bottom: 0;
+  background-color: #1b1bae91;
+  font-size: 20px;
+  font-weight: bold;
+}
+          
+              th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+                font-size: 20px;
+                font-weight: bold;
+              }
+          
+              th {
+                background-color: #3737ae68;
+                color: white;
+              }
+</style>
 			<main class="content">
 				<div class="container-fluid p-0">
 				
@@ -132,7 +179,7 @@
 
 								<table class="table table-hover my-0">
 									<thead>
-										<tr>
+										<tr class="blue-header">
 											<th>Brand</th>
 											<th>Model</th>
 											<th>Total order</th>
@@ -162,7 +209,7 @@
 							</div>
 							<div class="card-body d-flex w-100">
 								<div class="align-self-center chart chart-lg">
-									<canvas id="chartjs-dashboard-bar"></canvas>
+									<div id="chartjs-dashboard-bar"></div>
 								</div>
 							</div>
 						</div>
@@ -200,79 +247,16 @@
 	</div>
 
 	<script src="js/app.js"></script>
-	<script>
-		let myChart;
-		document.addEventListener("DOMContentLoaded", function() {
-			const dateFilter = document.getElementById('datetimepicker-dashboard');
-			myChart = new Chart(document.getElementById('chartjs-dashboard-bar'), {
-				type: 'bar',
-				data: {
-					labels: [], // Initialize empty labels
-					datasets: [
-						{
-							label: "Total Order",
-							backgroundColor: window.theme.primary,
-							borderColor: window.theme.primary,
-							hoverBackgroundColor: window.theme.primary,
-							hoverBorderColor: window.theme.primary,
-							data: [], // Initialize empty data
-							barPercentage: 1,
-							categoryPercentage: 1
-						},
-						{
-							label: "Completed",
-							backgroundColor: window.theme.success,
-							borderColor: window.theme.success,
-							hoverBackgroundColor: window.theme.success,
-							hoverBorderColor: window.theme.success,
-							data: [], // Initialize empty data
-							barPercentage: 1,
-							categoryPercentage: 1
-						},
-						{
-							label: "Pending",
-							backgroundColor: window.theme.danger,
-							borderColor: window.theme.danger,
-							hoverBackgroundColor: window.theme.danger,
-							hoverBorderColor: window.theme.danger,
-							data: [], // Initialize empty data
-							barPercentage: 0.5,
-							categoryPercentage: 1
-						}
-					]
-				},
-				options: {
-					scales: {
-						y: {
-							beginAtZero: true
-						}
-					},
-					plugins: {
-						datalabels: {
-							display: true,
-							color: '#000',
-							formatter: (value, ctx) => {
-								let datasets = ctx.chart.data.datasets;
-								if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
-									let sum = datasets[0].data.reduce((a, b) => a + b, 0);
-									let percentage = Math.round((value / sum) * 100) + '%';
-									console.log('Percentage:', percentage);
-									return percentage;
-								} else {
-									return value;
-								}
-							}
-						}
-					}
-				}
-			});
-		});
-	</script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+	
+
 
 
 	<script>
+        
+       if (!sessionStorage.getItem('hasVisited')) {
+           sessionStorage.setItem('hasVisited', 'true');
+           window.location.href = "pages-sign-in.html";
+       }
 document.addEventListener("DOMContentLoaded", function() {
     var date = new Date(Date.now());
     var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
@@ -284,18 +268,23 @@ document.addEventListener("DOMContentLoaded", function() {
         defaultDate: defaultDate,
         onChange: function(selectedDates, dateStr, instance) {
 			console.log(`Fetching data for date: ${dateStr}`);
-            fetch(`https://localhost:7199/admin_dashboard?dt=${dateStr}`)
+            fetch(`http://110.172.134.186:89/admin_dashboard?dt=${dateStr}`)
 			
                 .then(response => response.json())
 				.then(data => {
     console.log('Data from server:', data);
     // Update your chart data here
-	myChart.data.labels = data.map(item => item.brand);
-    myChart.data.datasets[0].data = data.map(item => item.untouched_order + item.touched_order); // Total Order
-    myChart.data.datasets[1].data = data.map(item => item.total_in); // Not Completed
-    myChart.data.datasets[2].data = data.map(item => item.total_out); // Completed
-    myChart.update();
-    console.log('Chart data after update:', myChart.data);
+	// myChart.data.labels = data.map(item => item.brand);
+    //  myChart.data.datasets[0].data = data.map(item => item.untouched_order + item.touched_order); 
+    // myChart.data.datasets[1].data = data.map(item => item.total_in);
+    //  myChart.data.datasets[2].data = data.map(item => item.total_out - item.total_in); 
+    //  myChart.update();
+
+
+
+	// total in - toatal oyut (total production) ==== in process 
+	// defect    total repair or 
+    //console.log('Chart data after update:', myChart.data);
 
     // Insert data into tableBody
 	let tableBody = document.getElementById('tableBody');
@@ -325,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
         row.appendChild(cellTotalOut);
 
         let cellTotalRepair = document.createElement('td');
-        cellTotalRepair.textContent = item.total_repair;
+        cellTotalRepair.textContent = item.curr_repair;
         row.appendChild(cellTotalRepair);
 
         let cellCurrentIn = document.createElement('td');
@@ -346,6 +335,195 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });</script>
 
-</body>
 
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var date = new Date(Date.now());
+        var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+        var dateFilter = document.getElementById("datetimepicker-dashboard");
+        dateFilter.flatpickr({
+            inline: false,
+            prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+            nextArrow: "<span title=\"Next month\">&raquo;</span>",
+            defaultDate: defaultDate,
+            onChange: function(selectedDates, dateStr, instance) {
+                console.log(`Fetching data for date: ${dateStr}`);
+                
+                fetch(`http://110.172.134.186:89/admin_dashboard?dt=${dateStr}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Data from server:', data);
+
+                        
+                        // Prepare data for Highcharts
+                       
+                        // Prepare data for Highcharts
+                        var brands = data.map(item => item.brand);
+                        var totalOrders = data.map(item => item.untouched_order + item.touched_order);
+                        var notCompleted = data.map(item => item.total_in);
+                        var completed = data.map(item => item.total_out - item.total_in);
+                        
+
+
+ const groupedData = {};
+                    data.forEach(item => {
+                        const key = `${item.brand}-${item.model_no}`;
+                        if (!groupedData[key]) {
+                            groupedData[key] = {
+                                brand: item.brand,
+                                model: item.model_no,
+                                totalOrders: 0,
+                                notCompleted: 0,
+                                completed: 0
+                            };
+                        }
+                        groupedData[key].totalOrders += item.untouched_order + item.touched_order;
+                        groupedData[key].notCompleted += item.total_in;
+                        groupedData[key].completed += item.total_out - item.total_in;
+                    });
+
+                    // Transform grouped data into arrays for Highcharts series
+                    const seriesData = Object.values(groupedData).map(item => ({
+                        name: `${item.brand} - ${item.model}`,
+                        data: [item.totalOrders, item.notCompleted, item.completed]
+                    }));
+
+                        // Create the chart
+                  
+						Highcharts.chart('chartjs-dashboard-bar', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Production Status - Brand Model wise',
+        style: {
+            fontSize: "30px",
+        },
+    },
+    xAxis: {
+        categories: brands,
+        labels: {
+            style: {
+                fontSize: '20px',  // Increase x-axis label font size
+                fontWeight: "bold"
+            }
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total production',
+            style: {
+                fontSize: '20px',  // Increase y-axis title font size
+                fontWeight: "bold"
+            }
+        },
+        labels: {
+            style: {
+                fontSize: '20px',  // Increase y-axis label font size
+                fontWeight: "bold"
+            }
+        }
+    },
+    plotOptions: {
+        column: {
+            grouping: true,  // Enable grouping
+            shadow: false,
+            borderWidth: 0,
+            pointWidth: 40,  // Increase bar width
+            dataLabels: {
+                enabled: true,  // Enable data labels
+                style: {
+                    fontSize: '20px'  // Increase data label font size
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Total Order',
+        data: totalOrders,
+        pointPadding: 0
+    }, {
+        name: 'Not Completed',
+        data: notCompleted,
+        pointPadding: 0.2
+    }, {
+        name: 'Completed',
+        data: completed,
+        pointPadding: 0.4
+    }],
+    exporting: {
+        buttons: {
+            contextButton: {
+                menuItems: [
+                    'viewFullscreen',
+                    'printChart',
+                    'downloadPNG',
+                    'downloadJPEG',
+                    'downloadPDF',
+                    'downloadSVG',
+                    'downloadCSV',
+                    'downloadXLS',
+                    'viewData'
+                ]
+            }
+        }
+    },
+    credits: {
+        enabled: false,
+    }
+});                        // Insert data into tableBody
+                        let tableBody = document.getElementById('tableBody');
+                        tableBody.innerHTML = ''; // Clear the current content
+
+                        data.forEach((item) => {
+                            let row = document.createElement('tr');
+
+                            let cellBrand = document.createElement('td');
+                            cellBrand.textContent = item.brand;
+                            row.appendChild(cellBrand);
+
+                            let cellModel = document.createElement('td');
+                            cellModel.textContent = item.model_no;
+                            row.appendChild(cellModel);
+
+                            let cellTotalOrder = document.createElement('td');
+                            cellTotalOrder.textContent = item.untouched_order + item.touched_order;
+                            row.appendChild(cellTotalOrder);
+
+                            let cellTotalIn = document.createElement('td');
+                            cellTotalIn.textContent = item.total_in;
+                            row.appendChild(cellTotalIn);
+
+                            let cellTotalOut = document.createElement('td');
+                            cellTotalOut.textContent = item.total_out;
+                            row.appendChild(cellTotalOut);
+
+                            let cellTotalRepair = document.createElement('td');
+                            cellTotalRepair.textContent = item.curr_repair;
+                            row.appendChild(cellTotalRepair);
+
+                            let cellCurrentIn = document.createElement('td');
+                            cellCurrentIn.textContent = item.curr_in;
+                            row.appendChild(cellCurrentIn);
+
+                            let cellCurrentOut = document.createElement('td');
+                            cellCurrentOut.textContent = item.curr_out;
+                            row.appendChild(cellCurrentOut);
+
+                            tableBody.appendChild(row);
+                        });
+                    })
+                    .catch(error => {
+                        console.log('Error fetching data:', error);
+                    })
+            }
+        });
+    });
+   
+   
+   
+   </script>
+</body>
 </html>
